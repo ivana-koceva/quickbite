@@ -2,16 +2,23 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import  HeadingComponent  from './components/HeadingComponent'
-import PrimaryButtonComponent from './components/PrimaryButton'
-import SecondaryButtonComponent from './components/SecondaryButton'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from './pages/Home'
+import Menu from './pages/Menu'
+import Jobs from './pages/Jobs'
+import About from './pages/About'
 
 function App() {
   return (
     <>
-      <HeadingComponent text={"Best Fast Food Place In Town!"}/>
-      <PrimaryButtonComponent text={"Order now"}/>
-      <SecondaryButtonComponent text={"Order Delivery"}/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/menu" element={<Menu />}></Route>
+          <Route path="/join-us" element={<Jobs />}></Route>
+          <Route path="/about-us" element={<About />}></Route>
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
