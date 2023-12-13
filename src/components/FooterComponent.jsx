@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Logo from '../images/quickbite.png'
 
-const Footer = styled.div`
+const Footer = styled.span`
     //height: 333px;
-    padding: 3rem 0;
+    padding: 2rem;
     background: #9F0000;
     display: flex;
     justify-content: space-evenly;
@@ -12,12 +12,16 @@ const Footer = styled.div`
 
     @media (max-width: 767px) {
         display: grid;
+        justify-content: center;
     }
 `
 const FooterLinkContainer = styled.div`
     display: grid;
     text-align: left;
     margin: 0 4rem;
+    @media (max-width: 767px) {
+        margin: 2rem 1rem;
+    }
 `
 const FooterLinksWrapper = styled.div`
     display: flex;
@@ -47,13 +51,15 @@ const FooterLink = styled.a`
 const FooterImage = styled.img`
     width: 180px;
 `
-
+const ImageLink = styled.a`
+    margin: 2rem auto;
+`
 function FooterComponent() {
   return <Footer>
-    <a href='/'>
+    <ImageLink href='/'>
         <FooterImage src={Logo}>
         </FooterImage>
-    </a>
+    </ImageLink>
     <FooterLinksWrapper>
         <FooterLinkContainer>
             <FooterTitle>About Us</FooterTitle>
