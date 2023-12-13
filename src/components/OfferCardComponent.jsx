@@ -30,6 +30,7 @@ const CardText = styled.span`
     color: #0D0909;
     padding: 1rem 0;
     line-break: auto;
+    margin-bottom: 1rem;
 `
 const CardImage = styled.img`
     border-radius: 25px 25px 0 0;
