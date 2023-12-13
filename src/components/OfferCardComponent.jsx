@@ -11,7 +11,7 @@ const Card = styled.div`
 const CardTextContainer = styled.div`
     display: grid;
     text-align: left;
-    padding: 2rem 1rem;
+    padding: 2rem 1.4rem;
 `
 const CardTitle = styled.span`
     font-family: 'Montserrat';

@@ -21,6 +21,11 @@ const CategoryButton = styled.button`
     :hover {
         background: #F9F9F9;
     }
+
+    :active {
+        background: #9F0000;
+        color: #FFFFFF;
+    }
 `
 const CategoryImage = styled.img`
     width: 25px;

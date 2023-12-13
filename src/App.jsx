@@ -8,10 +8,13 @@ import Menu from './pages/Menu'
 import Jobs from './pages/Jobs'
 import About from './pages/About'
 import FooterComponent from './components/FooterComponent';
+import HeaderComponent from './components/HeaderComponent';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   return (
     <>
+    <HeaderComponent></HeaderComponent>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />}></Route>
