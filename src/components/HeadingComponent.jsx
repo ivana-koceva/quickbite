@@ -8,6 +8,7 @@ const Heading = styled.h1`
     font-size: 43px;
     text-transform: uppercase;
     color: #BB0000;
+    text-align: left;
 `;
 
 function HeadingComponent({ text }) {
