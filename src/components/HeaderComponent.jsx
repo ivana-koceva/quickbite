@@ -29,8 +29,8 @@ function HeaderComponent() {
     <HeaderLinkContainer>
         <HeaderLink href='/'>Home</HeaderLink>
         <HeaderLink href='/menu'>Our Menu</HeaderLink>
-        <HeaderLink href='/join-us'>Join Our Team</HeaderLink>
-        <HeaderLink href='/about-us'>Our Story</HeaderLink>
+        <HeaderLink href='/about-our-food'>About Our Food</HeaderLink>
+        <HeaderLink href='/contact-us'>Contact Us</HeaderLink>
     </HeaderLinkContainer>
   </Header>;
 }

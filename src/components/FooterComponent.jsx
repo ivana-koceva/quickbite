@@ -66,8 +66,8 @@ function FooterComponent() {
             <FooterTitle>About Us</FooterTitle>
             <FooterLink href='/'>Home</FooterLink>
             <FooterLink href='/menu'>Our Menu</FooterLink>
-            <FooterLink href='/join-us'>Join Our Team</FooterLink>
-            <FooterLink href='/about-us'>Our Story</FooterLink>
+            <FooterLink href='/about-our-food'>About Our Food</FooterLink>
+            <FooterLink href='/contact-us'>Contact Us</FooterLink>
         </FooterLinkContainer>
         <FooterLinkContainer className='d-grid text-left'>
             <FooterTitle>Customer Care</FooterTitle>
@@ -79,7 +79,7 @@ function FooterComponent() {
             <FooterTitle>Follow Us</FooterTitle>
                 <FooterLink href='/'>Home</FooterLink>
                 <FooterLink href='/'>Our Menu</FooterLink>
-                <FooterLink href='/'>Join Our Team</FooterLink>
+                <FooterLink href='/'>About Our Food</FooterLink>
         </FooterLinkContainer>
     </FooterLinksWrapper>
   </Footer>;
