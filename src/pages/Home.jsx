@@ -20,13 +20,14 @@ import BannerTablet from '../images/bannertablet.png'
 import BannerPhone from '../images/bannerphone.png'
 import FriesImage from '../images/friesedited.png'
 import SubheadingComponent from '../components/SubheadingComponent'
+import AboutUs from '../images/aboutus.jpg'
 
 const CategoryCardsWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // flex-direction: row;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: center;
 `
 const OffersContainerWrapper = styled.div`
   display: flex;
@@ -105,7 +106,42 @@ const CTAContainer = styled.div`
   @media (max-width: 576px) {
     margin-bottom: 15rem;
   }
-`;
+`
+const AboutUsImage = styled.div`
+  background-image: url(${AboutUs});
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 9rem;
+`
+const AboutUsTextContainer = styled.div`
+  padding: 4rem;
+`
+const AboutUsText = styled.p`
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  color: #0D0909;
+  text-align: left;
+  line-break: auto;
+  width: 90%;
+
+  @media (max-width: 1400px) {
+    font-size: 0.9rem;
+  }
+  @media (max-width: 1200px) {
+    font-size: 0.9rem;
+  }
+  @media (max-width: 992px) {
+    font-size: 0.8rem;
+  }
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+  }
+  @media (max-width: 576px) {
+    font-size: 0.8rem;
+  }
+`
 function Home() {
   return (
     <> <BannerImageWrapper className='container-fluid'>
@@ -123,15 +159,43 @@ function Home() {
         </BannerImage>
       </BannerImageWrapper>
 
+      <div className='container'>
       <SubheadingComponent text="Menu"></SubheadingComponent>
-      <CategoryCardsWrapper>
-        <CategoryCardComponent text="Burgers" image={Burger}></CategoryCardComponent>
-        <CategoryCardComponent text="Fries" image={Fries}></CategoryCardComponent>
-        <CategoryCardComponent text="Wraps" image={Wrap}></CategoryCardComponent>
-        <CategoryCardComponent text="Salads" image={Salad}></CategoryCardComponent>
-        <CategoryCardComponent text="Sweets" image={Sweets}></CategoryCardComponent>
-        <CategoryCardComponent text="Drinks" image={Drinks}></CategoryCardComponent>
+      <CategoryCardsWrapper className='row'>
+        <div className="col-lg-2 col-md-4 col-12 d-flex justify-content-center"> 
+          <CategoryCardComponent text="Burgers" image={Burger}></CategoryCardComponent>
+        </div>
+        <div className="col-lg-2 col-md-4 col-12 d-flex justify-content-center"> 
+          <CategoryCardComponent text="Fries" image={Fries}></CategoryCardComponent>
+        </div>
+        <div className="col-lg-2 col-md-4 col-12 d-flex justify-content-center"> 
+          <CategoryCardComponent text="Wraps" image={Wrap}></CategoryCardComponent>
+        </div>
+        <div className="col-lg-2 col-md-4 col-12 d-flex justify-content-center"> 
+          <CategoryCardComponent text="Salads" image={Salad}></CategoryCardComponent>
+        </div>
+        <div className="col-lg-2 col-md-4 col-12 d-flex justify-content-center"> 
+          <CategoryCardComponent text="Sweets" image={Sweets}></CategoryCardComponent>
+        </div>
+        <div className="col-lg-2 col-md-4 col-12 d-flex justify-content-center"> 
+          <CategoryCardComponent text="Drinks" image={Drinks}></CategoryCardComponent>
+        </div>
       </CategoryCardsWrapper>
+</div>
+      <div className='container-fluid my-5'>
+        <div className='row'>
+          <AboutUsImage className='col-md-6'>
+          </AboutUsImage>
+          <AboutUsTextContainer className='col-md-6 col-12'>
+            <HeadingComponent text="Our flavourful journey"></HeadingComponent>
+            <AboutUsText>At QuickCrunch, we're dedicated to serving up delicious, freshly-made meals that fit seamlessly into your fast-paced lifestyle. 
+            With a commitment to quality ingredients, diverse menu options, and a passion for exceptional service, we strive to exceed your expectations with every order. 
+            From our juicy burgers to crispy fries and a range of dietary-friendly choices, we're here to satisfy your cravings while ensuring a quick and delightful experience.
+            Join us and taste the perfect combination of convenience and taste at QuickCrunch!</AboutUsText> 
+            <PrimaryButtonComponent text="Learn More"></PrimaryButtonComponent>
+          </AboutUsTextContainer>
+        </div>
+      </div>
 
       <OffersContainerWrapper>
         <OfferCardComponent title="Buy One Get One Free Tuesday" text="Savor the deliciousness of two burgers for the price of one 
@@ -143,7 +207,7 @@ function Home() {
       </OffersContainerWrapper>
        
       
-
+      
       
       <NewsContainerWrapper className='container-fluid'>
         <NewsContainer className='row'>
