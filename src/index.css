@@ -14,13 +14,19 @@
 }
 
 a {
-  font-weight: 500;
-  color: #9F0000;
+  font-weight: 400;
+  font-size: 14px;
+  color: #0D0909;
   text-decoration: inherit;
- }/*
+  font-family: 'Montserrat';
+  text-transform: capitalize;
+}
 a:hover {
-   color: #000000; 
-} */
+  color: #9F0000;
+  font-weight: 500;
+  transition: 100ms;
+  transition-timing-function: ease-in-out;
+} 
 
 body {
   margin: 0;

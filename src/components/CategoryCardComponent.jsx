@@ -6,22 +6,27 @@ const Card = styled.button`
     border-radius: 15px;
     margin: 1rem;
     display: grid;
-    padding: 1rem 1.5rem;
     background: transparent;
+
+    &:hover {
+        background: #F6F6F6;
+        transition: 100ms;
+        transition-timing-function: ease-in-out;
+    }
 `;
 
-const CardTitle = styled.span`
+const CardTitle = styled.h6`
     font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
     text-align: center;
     text-transform: capitalize;
     color: #BB0000;
+    font-weight: 300;
+    padding-bottom: 0.5rem;
 `;
 
 const CardImage = styled.img`
-    width: 120px;
+    width: 130px;
+    padding: 0.5rem;
 `;
 
 function CategoryCardComponent({ text, image }) {
