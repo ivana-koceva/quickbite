@@ -7,6 +7,7 @@ const Card = styled.div`
     background: #FEFEFE;
     box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
     border-radius: 30px;
+    margin: 1rem;
 `;
 const CardTextContainer = styled.div`
     display: grid;
@@ -17,7 +18,6 @@ const CardTitle = styled.h4`
     font-family: 'Montserrat';
     font-weight: 700;
     font-size: 34px;
-    // line-height: 36px;
     text-transform: uppercase;
     color: #9F0000;
 `;
@@ -31,12 +31,12 @@ const CardText = styled.p`
 `
 const CardImage = styled.img`
     border-radius: 30px 30px 0 0;
-    // width: 400px;
+    width: 100%;
 `;
 
 function OfferCardComponent({ title, text, image }) {
   return <Card>
-            <CardImage src={image} className='img-fluid'></CardImage>
+            <CardImage src={image}></CardImage>
             <CardTextContainer>
                 <CardTitle>{title}</CardTitle>
                 <CardText>{text}</CardText>

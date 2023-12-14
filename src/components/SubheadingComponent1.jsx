@@ -27,8 +27,8 @@ const Heading = styled.h1`
     }
 `;
 
-function SubheadingComponent({ text }) {
+function SubheadingComponent1({ text }) {
   return <Heading>{text}</Heading>;
 }
 
-export default SubheadingComponent;
+export default SubheadingComponent1;

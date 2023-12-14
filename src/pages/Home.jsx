@@ -12,30 +12,21 @@ import Salad from '../images/salad.png'
 import Sweets from '../images/sundae.png'
 import Drinks from '../images/coffee.png'
 import OfferCardComponent from '../components/OfferCardComponent'
-import Offer1 from '../images/offers_1.png'
-import Offer2 from '../images/offers_2.png'
-import Offer3 from '../images/offers_3.png'
 import BannerLaptop from '../images/bannerlaptop.png'
 import BannerTablet from '../images/bannertablet.png'
 import BannerPhone from '../images/bannerphone.png'
 import FriesImage from '../images/friesedited.png'
-import SubheadingComponent from '../components/SubheadingComponent'
+import SubheadingComponent1 from '../components/SubheadingComponent1'
+import SubheadingComponent2 from '../components/SubheadingComponent2'
 import AboutUs from '../images/aboutus.jpg'
+import Offer1 from '../images/offer 1.jpg'
+import Offer2 from '../images/offer 2.jpg'
+import Offer3 from '../images/offer 3.jpg'
 
 const CategoryCardsWrapper = styled.div`
-  // display: flex;
-  // flex-direction: row;
-  // flex-wrap: wrap;
-  // justify-content: center;
-  // align-items: center;
 `
 const OffersContainerWrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 80%;
-  margin: 2rem auto;
-  padding: 3rem 0;
+  padding: 1rem 0;
 `
 const NewsContainerWrapper = styled.div`
   background-image: 
@@ -59,7 +50,6 @@ const NewsContainer = styled.div`
   }
 `
 const NewsTextContainer = styled.div`
-  //padding: 3rem 1rem;
 `
 const ButtonsContainerWrapper = styled.div`
   display: flex;
@@ -160,7 +150,7 @@ function Home() {
       </BannerImageWrapper>
 
       <div className='container'>
-      <SubheadingComponent text="Menu"></SubheadingComponent>
+      <SubheadingComponent1 text="Menu"></SubheadingComponent1>
       <CategoryCardsWrapper className='row'>
         <div className="col-lg-2 col-md-4 col-12 d-flex justify-content-center"> 
           <CategoryCardComponent text="Burgers" image={Burger}></CategoryCardComponent>
@@ -197,18 +187,22 @@ function Home() {
         </div>
       </div>
 
-      <OffersContainerWrapper>
-        <OfferCardComponent title="Buy One Get One Free Tuesday" text="Savor the deliciousness of two burgers for the price of one 
-        and treat yourself to a flavorful meal deal. Now available every Tuesday from 10am to 4pm!" image={Offer1}></OfferCardComponent>
-        <OfferCardComponent title="Exclusive PB&J Discounts" text="Enjoy special discounts on our delectable sandwiches!
-        Treat yourself to the nostalgic flavors of peanut butter and jelly at a fraction of the cost." image={Offer2}></OfferCardComponent>
-        <OfferCardComponent title="Wrap It Up: Christmas Offer" text="Unwrap delicious savings with our latest offer on a variety of wraps! 
-        Dive into a world of savory flavors and fresh ingredients throughout the holidays!" image={Offer3}></OfferCardComponent>
+      <div className='container my-5 py-5'>
+      <SubheadingComponent2 text="Our Offers"></SubheadingComponent2>
+      <OffersContainerWrapper className='row'>
+        <div className='col-lg-4 col-12'>
+          <OfferCardComponent title="Wrap & Coca cola combo" text="Get a free ice-cold Coca-Cola with every wrap purchased. Combine your favorite food with the refreshing taste of Coca-Cola, on us!" image={Offer1} ></OfferCardComponent>
+        </div>
+        <div className='col-lg-4 col-12'>
+          <OfferCardComponent title="Buy One Get One Free Tuesday" text="Savor the deliciousness of two burgers for the price of one and treat yourself to a flavorful meal deal. Now available every Tuesday!" image={Offer2}></OfferCardComponent>
+        </div>
+        <div className='col-lg-4 col-12'>
+          <OfferCardComponent title="10% Off Your Pickup Order" text="Enjoy special discounts when picking up your order!
+          Treat yourself to any menu item of your choice at a fraction of the cost." image={Offer3}></OfferCardComponent>
+        </div>
       </OffersContainerWrapper>
-       
-      
-      
-      
+      </div>
+
       <NewsContainerWrapper className='container-fluid'>
         <NewsContainer className='row'>
         <NewsTextContainer className='col-lg-6 col-md-8 col-sm-8 text-left'>
