@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Card = styled.button`
-    border: 1px solid #BB0000;
+    //border: 1px solid #FFFFFF;
     border-radius: 15px;
     margin: 1rem;
     display: grid;
@@ -15,11 +15,11 @@ const Card = styled.button`
     }
 `;
 
-const CardTitle = styled.h6`
+const CardTitle = styled.a`
     font-family: 'Montserrat';
     text-align: center;
     text-transform: capitalize;
-    color: #BB0000;
+    color: #0D0909;
     font-weight: 300;
     padding-bottom: 0.5rem;
 `;

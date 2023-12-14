@@ -31,7 +31,6 @@ function HeaderComponent() {
         <HeaderLink href='/menu'>Our Menu</HeaderLink>
         <HeaderLink href='/join-us'>Join Our Team</HeaderLink>
         <HeaderLink href='/about-us'>Our Story</HeaderLink>
-        <PrimaryButtonComponent text="Place order"></PrimaryButtonComponent>
     </HeaderLinkContainer>
   </Header>;
 }

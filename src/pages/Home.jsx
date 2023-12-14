@@ -18,6 +18,8 @@ import Offer3 from '../images/offers_3.png'
 import BannerLaptop from '../images/bannerlaptop.png'
 import BannerTablet from '../images/bannertablet.png'
 import BannerPhone from '../images/bannerphone.png'
+import FriesImage from '../images/friesedited.png'
+import SubheadingComponent from '../components/SubheadingComponent'
 
 const CategoryCardsWrapper = styled.div`
   display: flex;
@@ -35,15 +37,28 @@ const OffersContainerWrapper = styled.div`
   padding: 3rem 0;
 `
 const NewsContainerWrapper = styled.div`
-  background-image: url(${Rewards});
+  background-image: 
+  linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(15, 17, 16, 0.5)), url(${FriesImage});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   padding: 4rem 1rem;
+
+  @media (max-width: 768px) {
+    background-position: top;
+  }
+`
+const NewsContainer = styled.div`
+  margin: 3rem 3.5rem;
+  @media (max-width: 992px) {
+    margin: 0 2rem;
+  }
+  @media (max-width: 768px) {
+    margin: 0 1.5rem;
+  }
 `
 const NewsTextContainer = styled.div`
-  text-align: left;
-  padding: 4rem;
+  //padding: 3rem 1rem;
 `
 const ButtonsContainerWrapper = styled.div`
   display: flex;
@@ -108,6 +123,7 @@ function Home() {
         </BannerImage>
       </BannerImageWrapper>
 
+      <SubheadingComponent text="Menu"></SubheadingComponent>
       <CategoryCardsWrapper>
         <CategoryCardComponent text="Burgers" image={Burger}></CategoryCardComponent>
         <CategoryCardComponent text="Fries" image={Fries}></CategoryCardComponent>
@@ -126,15 +142,21 @@ function Home() {
         Dive into a world of savory flavors and fresh ingredients throughout the holidays!" image={Offer3}></OfferCardComponent>
       </OffersContainerWrapper>
        
-      <NewsContainerWrapper>
-        <NewsTextContainer>
-          <HeadingComponent text="Enjoy our rewards program!"></HeadingComponent>
+      
+
+      
+      <NewsContainerWrapper className='container-fluid'>
+        <NewsContainer className='row'>
+        <NewsTextContainer className='col-lg-6 col-md-8 col-sm-8 text-left'>
+          <HeadingComponent text="Join The Rewards Club!"></HeadingComponent>
           <ParagraphComponent text="Earn points with every purchase, unlocking delicious perks and exclusive discounts. 
-          Whether you're a fan of our crispy fries, juicy burgers, or refreshing drinks, your loyalty deserves to be rewarded. 
           Sign up today and savor the taste of savings with every visit!"></ParagraphComponent> 
           <PrimaryButtonComponent text="Sign up"></PrimaryButtonComponent>
         </NewsTextContainer>
+        <div className='col-lg-6 col-md-5 col-sm-4'></div>
+        </NewsContainer>
       </NewsContainerWrapper>
+      
     </>
   )
 }
