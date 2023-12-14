@@ -66,8 +66,8 @@ function FooterComponent() {
             <FooterTitle>About Us</FooterTitle>
             <FooterLink href='/'>Home</FooterLink>
             <FooterLink href='/menu'>Our Menu</FooterLink>
-            <FooterLink href='/join-us'>Join Our Team</FooterLink>
             <FooterLink href='/about-us'>Our Story</FooterLink>
+            <FooterLink href='/contact-us'>Reach Out</FooterLink>
         </FooterLinkContainer>
         <FooterLinkContainer className='d-grid text-left'>
             <FooterTitle>Customer Care</FooterTitle>

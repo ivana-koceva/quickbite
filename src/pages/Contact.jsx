@@ -1,5 +1,5 @@
 
-function Jobs() {
+function Contact() {
     return (
       <>
           <div>Join Our Team</div>
@@ -7,5 +7,5 @@ function Jobs() {
     )
   }
   
-  export default Jobs;
+  export default Contact;
   

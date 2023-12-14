@@ -41,7 +41,7 @@ function OfferCardComponent({ title, text, image }) {
                 <CardTitle>{title}</CardTitle>
                 <CardText>{text}</CardText>
                 <span>
-                <PrimaryButtonComponent text="Order now"></PrimaryButtonComponent>
+                <PrimaryButtonComponent text="Learn more"></PrimaryButtonComponent>
                 </span>
             </CardTextContainer>
     </Card>;
