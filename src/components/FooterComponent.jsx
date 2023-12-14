@@ -71,9 +71,9 @@ function FooterComponent() {
         </FooterLinkContainer>
         <FooterLinkContainer className='d-grid text-left'>
             <FooterTitle>Customer Care</FooterTitle>
-                <FooterLink href='/'>Cookies</FooterLink>
-                <FooterLink href='/'>Privacy Policy</FooterLink>
-                <FooterLink href='/'>Terms & Conditions</FooterLink>
+                <FooterLink href='/cookie-policy'>Cookies</FooterLink>
+                <FooterLink href='/privacy-policy'>Privacy Policy</FooterLink>
+                <FooterLink href='/terms-and-conditions'>Terms & Conditions</FooterLink>
         </FooterLinkContainer>
         <FooterLinkContainer className='d-grid text-left'>
             <FooterTitle>Follow Us</FooterTitle>
