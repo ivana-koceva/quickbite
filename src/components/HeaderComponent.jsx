@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Logo from '../images/quickbitecolor.png'
 import PrimaryButtonComponent from './PrimaryButton';
+import { IoCartOutline } from "react-icons/io5";
 
 const Header = styled.header`
     background: #FCFCFC;
@@ -30,6 +31,9 @@ function HeaderComponent() {
         <HeaderLink href='/menu'>Our Menu</HeaderLink>
         <HeaderLink href='/about-us'>Our Story</HeaderLink>
         {/* <HeaderLink href='/contact-us'>Reach Out</HeaderLink> */}
+        <HeaderLink href='/cart'>
+            <IoCartOutline size={"24px"}></IoCartOutline>
+        </HeaderLink>
     </HeaderLinkContainer>
   </Header>;
 }

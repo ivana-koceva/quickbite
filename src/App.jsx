@@ -10,10 +10,12 @@ import TermsAndConditons from './pages/Terms&Conditions';
 import FooterComponent from './components/FooterComponent';
 import HeaderComponent from './components/HeaderComponent';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Cart from './pages/Cart';
+import { CartProvider } from './context/CartContext';
 
 function App() {
   return (
-    <>
+    <CartProvider>
     <HeaderComponent></HeaderComponent>
       <BrowserRouter>
         <Routes>
@@ -24,10 +26,11 @@ function App() {
           <Route path="/cookie-policy" element={<CookiePolicy />}></Route>
           <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
           <Route path="/terms-and-conditions" element={<TermsAndConditons />}></Route>
+          <Route path="/cart" element={<Cart />}></Route>
         </Routes>
       </BrowserRouter>
       <FooterComponent></FooterComponent>
-    </>
+    </CartProvider>
   )
 }
 

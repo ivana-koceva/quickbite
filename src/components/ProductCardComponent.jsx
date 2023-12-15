@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import PrimaryButtonComponent from './PrimaryButton';
+import { useState } from 'react';
+import { IoCloseOutline } from "react-icons/io5";
 
 const Card = styled.div`
     background: #FEFEFE;
@@ -107,8 +109,54 @@ const ButtonText = styled.text`
         font-size: 0.7rem;
     }
 `
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`
+const Modal = styled.div`
+  background-color: #FFFFFF;
+  padding: 20px 35px;
+  border-radius: 25px;
+  max-width: 400px;
+  text-align: center;
+`
+const ModalTitle = styled.h3`
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  text-transform: uppercase;
+  color: #BB0000;
+  text-align: center;
+`
+const ModalText = styled.p`
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: center;
+  text-transform: capitalize;
+  color: #0D0909;
+`
+function ProductCardComponent({ name, image, category, id, price, addToCart }) {
+  const [showModal, setShowModal] = useState(false);
+  const [quantity, setQuantity] = useState(1);
 
-function ProductCardComponent({ name, image, category, id, price }) {
+  const handleAddToCart = () => {
+    const item = { id, name, image, price, quantity };
+    
+    addToCart(item);
+
+    setShowModal(false);
+  };
+
   return <Card className='my-2 mx-2'>
             <div className='d-flex justify-content-center'>
                 <CardImage src={image}></CardImage>
@@ -118,10 +166,37 @@ function ProductCardComponent({ name, image, category, id, price }) {
                 <div className='d-flex justify-content-between align-items-center'>
                     <CardText>$ {price}</CardText>
                     <div>
-                    <Button><ButtonText>Add To Cart</ButtonText></Button>
+                    <Button onClick={() => setShowModal(true)}><ButtonText>Add To Cart</ButtonText></Button>
                     </div>
                 </div>
             </CardTextContainer>
+            {showModal && (
+              <ModalOverlay>
+              <Modal className='px-5'>
+                <div onClick={() => setShowModal(false)} className='text-end my-2'>
+                  <IoCloseOutline size={'30px'}></IoCloseOutline>
+                </div>
+                <img src={image} alt={name} style={{ width: '280px' }}/>
+                <ModalTitle>{name}</ModalTitle>
+                <ModalText>Price: ${price}</ModalText>
+                <input
+                  type="number"
+                  id="quantity"
+                  value={quantity}
+                  min={"1"}
+                  onChange={(e) => setQuantity(parseInt(e.target.value))}
+                  style={{border: '1px solid #0D0909', borderRadius: '10px', fontFamily: 'Montserrat', fontWeight: '300', width: '95%',
+                  fontSize: '13px', color: '#0D0909', padding: '12px 19px', background: 'transparent', textAlign: 'center'}}
+                />
+                <div className='d-flex justify-content-between my-3'>
+                  <Button onClick={() => setShowModal(false)} style={{border: '1px solid #9F0000', borderRadius: '24px', fontFamily: 'Montserrat', fontWeight: '400',
+              fontSize: '16px', color: '#9F0000', padding: '10px 40px', background: 'transparent', textTransform: 'capitalize', marginRight: '2rem'}}>Cancel</Button>
+                  <Button onClick={handleAddToCart} style={{border: '1px solid #9F0000', borderRadius: '24px', fontFamily: 'Montserrat', fontWeight: '400',
+              fontSize: '16px', color: '#FFFFFF', padding: '10px 50px', background: '#9F0000', textTransform: 'capitalize'}}>Add</Button>
+                </div>
+              </Modal>
+            </ModalOverlay>
+      )}
         </Card>;
 }
 
