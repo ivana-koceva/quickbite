@@ -4,7 +4,6 @@ import PrimaryButtonComponent  from '../components/PrimaryButton'
 import SecondaryButtonComponent  from '../components/SecondaryButton'
 import CategoryCardComponent  from '../components/CategoryCardComponent'
 import styled from 'styled-components';
-import Rewards from '../images/rewardsb&w.png'
 import Burger from '../images/cheeseburger.png'
 import Fries from '../images/fries.png'
 import Wrap from '../images/wrap.png'
@@ -35,6 +34,7 @@ const NewsContainerWrapper = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   padding: 4rem 1rem;
+  
 
   @media (max-width: 768px) {
     background-position: top;
@@ -141,7 +141,7 @@ function Home() {
             <ParagraphComponent text="From irresistible burgers to crispy, flavorful fries, every bite is a taste of perfection. 
             Join us and discover why we're your top choice for unbeatable fast food satisfaction!"></ParagraphComponent> 
             <ButtonsContainerWrapper>
-              <PrimaryButtonComponent text="Order now"></PrimaryButtonComponent>
+              <PrimaryButtonComponent text="Order now" link="/about-us"></PrimaryButtonComponent>
               <SecondaryButtonComponent text="Order delivery"></SecondaryButtonComponent>
             </ButtonsContainerWrapper>
           </CTAContainer>
@@ -151,7 +151,7 @@ function Home() {
 
       <div className='container'>
       <SubheadingComponent1 text="Menu"></SubheadingComponent1>
-      <CategoryCardsWrapper className='row'>
+      <CategoryCardsWrapper className='row py-5'>
         <div className="col-lg-2 col-md-4 col-12 d-flex justify-content-center"> 
           <CategoryCardComponent text="Burgers" image={Burger}></CategoryCardComponent>
         </div>
@@ -182,7 +182,7 @@ function Home() {
             With a commitment to quality ingredients, diverse menu options, and a passion for exceptional service, we strive to exceed your expectations with every order. 
             From our juicy burgers to crispy fries and a range of dietary-friendly choices, we're here to satisfy your cravings while ensuring a quick and delightful experience.
             Join us and taste the perfect combination of convenience and taste at QuickCrunch!</AboutUsText> 
-            <PrimaryButtonComponent text="Learn More"></PrimaryButtonComponent>
+            <PrimaryButtonComponent text="Learn More" link="/about-us"></PrimaryButtonComponent>
           </AboutUsTextContainer>
         </div>
       </div>

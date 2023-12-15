@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Button = styled.button`
     border: 1px solid #BB0000;
@@ -25,7 +26,7 @@ const Button = styled.button`
     }
 `
 
-const ButtonText = styled.span`
+const ButtonText = styled.text`
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
@@ -47,11 +48,13 @@ const ButtonText = styled.span`
         font-size: 0.7rem;
     }
 `
-function SecondaryButtonComponent({ text }) {
+function SecondaryButtonComponent({ text, link }) {
   return (<Button>
-            <ButtonText>
-                {text}
-            </ButtonText>
+            <Link to={link}>
+                <ButtonText>
+                    {text}
+                </ButtonText>
+            </Link>
         </Button>);
 }
 

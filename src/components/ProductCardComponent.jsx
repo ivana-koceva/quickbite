@@ -30,21 +30,25 @@ const CardText = styled.p`
     line-break: auto;
 `
 const CardImage = styled.img`
-    border-radius: 30px 30px 0 0;
-    width: 100%;
+    width: 80%;
 `;
 
-function OfferCardComponent({ title, text, image }) {
-  return <Card>
-            <CardImage src={image}></CardImage>
+function ProductCardComponent({ name, image, category, id, price }) {
+  return //<Link to={`/menu/${category}/${id}`}>
+        <Card>
+            <div className='d-flex justify-content-center'>
+                <CardImage src={image}></CardImage>
+            </div>
             <CardTextContainer>
-                <CardTitle>{title}</CardTitle>
-                <CardText>{text}</CardText>
-                <span>
-                <PrimaryButtonComponent text="Learn more" link='/menu'></PrimaryButtonComponent>
-                </span>
+                <CardTitle>{name}</CardTitle>
+                <div className='d-flex justify-content-between align-items-center'>
+                    <CardText>{price}</CardText>
+                    <PrimaryButtonComponent text="Add To Cart" link='/order'></PrimaryButtonComponent>
+                </div>
             </CardTextContainer>
-    </Card>;
+        </Card>
+    //</Link>
+    ;
 }
 
-export default OfferCardComponent;
+export default ProductCardComponent;

@@ -25,7 +25,7 @@ function HeaderComponent() {
   return <Header className='d-flex justify-content-around align-items-center'>
     <a href='/'>
         <HeaderImage src={Logo}></HeaderImage>
-    </a>
+    </a >
     <HeaderLinkContainer>
         <HeaderLink href='/'>Home</HeaderLink>
         <HeaderLink href='/menu'>Our Menu</HeaderLink>

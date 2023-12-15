@@ -1,8 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const Card = styled.button`
-    //border: 1px solid #FFFFFF;
     border-radius: 15px;
     margin: 1rem;
     display: grid;
@@ -12,11 +12,19 @@ const Card = styled.button`
         background: #F6F6F6;
         transition: 100ms;
         transition-timing-function: ease-in-out;
+
+        h6 {
+            color: #9F0000;
+            font-weight: 500;
+            transition: 100ms;
+            transition-timing-function: ease-in-out;
+        }
     }
 `;
 
-const CardTitle = styled.a`
+const CardTitle = styled.h6`
     font-family: 'Montserrat';
+    font-size: 15px;
     text-align: center;
     text-transform: capitalize;
     color: #0D0909;
@@ -30,10 +38,14 @@ const CardImage = styled.img`
 `;
 
 function CategoryCardComponent({ text, image }) {
-  return <Card>
-            <CardImage src={image}></CardImage>
-            <CardTitle>{text}</CardTitle>
-    </Card>;
+  const formattedText = text.toLowerCase().replace(/\s+/g, '-');
+
+  return <Link to={`/menu/${formattedText}`}>
+            <Card>
+                <CardImage src={image}></CardImage>
+                <CardTitle >{text}</CardTitle>
+            </Card>
+       </Link>;
 }
 
 export default CategoryCardComponent;
