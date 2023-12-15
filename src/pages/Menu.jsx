@@ -9,7 +9,6 @@ const MenuWrapper = styled.div`
   margin: 5rem 0;
 ` 
 const CategoryCardWrapper = styled.div`
-  margin: 1rem 0;
 `
 function Menu() {
   const location = useLocation();
@@ -37,26 +36,30 @@ function Menu() {
   };
 
   const items = getCategoryItems(category);
-  
-  const productCards = items.map((item) => (
-    <ProductCardComponent
-      key={item.id}
-      id={item.id}
-      name={item.name}
-      image={item.image}
-      price={item.price}
-      category={category}
-    />
-  ));
 
-  console.log('Current URL:', productCards);
+  
     return (
-      <div className='container px-5'>
-          <MenuWrapper>
+      <div className='container'>
+          <MenuWrapper className='row'>
+            <div className="col-lg-3 col-12">
               <MenuComponent></MenuComponent>
-              <CategoryCardWrapper>
-                {productCards}
+            </div>
+            <div className='col-lg-9 col-12'>
+              <CategoryCardWrapper className='d-flex flex-wrap'>
+                
+                {items.map((item) => (
+                  <div className='col-xl-4 col-md-6 col-12'>
+                  <ProductCardComponent
+                    id={item.id}
+                    name={item.name}
+                    image={item.image}
+                    price={item.price}
+                    category={category}
+                  />
+                  </div>
+                ))}
               </CategoryCardWrapper>
+            </div>
           </MenuWrapper>
       </div>
     )

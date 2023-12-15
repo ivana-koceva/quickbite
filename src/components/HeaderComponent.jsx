@@ -30,7 +30,7 @@ function HeaderComponent() {
         <HeaderLink href='/'>Home</HeaderLink>
         <HeaderLink href='/menu'>Our Menu</HeaderLink>
         <HeaderLink href='/about-us'>Our Story</HeaderLink>
-        <HeaderLink href='/contact-us'>Reach Out</HeaderLink>
+        {/* <HeaderLink href='/contact-us'>Reach Out</HeaderLink> */}
     </HeaderLinkContainer>
   </Header>;
 }

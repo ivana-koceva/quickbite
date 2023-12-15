@@ -9,7 +9,11 @@ import Drinks from '../images/coffee.png'
 import { Link } from 'react-router-dom';
 
 const CategoriesWrapper = styled.div`
-    
+    @media (max-width: 991px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 `;
 const CategoryButton = styled.button`
     background: #FCFCFC;
@@ -31,10 +35,26 @@ const CategoryButton = styled.button`
         }
     }
     
+    @media (max-width: 991px) {
+        margin: 0.5rem;
+        width: 175px;
+        padding: 0.8rem;
+    }
+    @media (max-width: 768px) {
+        width: 150px;
+        margin: 0.3rem;
+        padding: 0.5rem;
+    }
 `
 const CategoryImage = styled.img`
     width: 30px;
     margin: 0 0.5rem;
+    @media (max-width: 991px) {
+        width: 28px;
+    }
+    @media (max-width: 768px) {
+        width: 26px;
+    }
 `
 const CategoryTitle = styled.h6`
     font-family: 'Montserrat';
@@ -44,6 +64,13 @@ const CategoryTitle = styled.h6`
     text-transform: capitalize;
     color: #0D0909;
     margin: 0 0.5rem;
+    @media (max-width: 991px) {
+        margin: 0.3rem;
+        font-size: 0.9rem;
+    }
+    @media (max-width: 768px) {
+        font-size: 0.8rem;
+    }
 `
 function MenuComponent() {
   return <CategoriesWrapper>

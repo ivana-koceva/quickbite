@@ -58,46 +58,19 @@ export const burgers = [
     price: 6.99,
     category: 'burgers'
   },
+  
   {
     id: 3,
-    name: "Double Cheeseburger",
-    image: DoubleCheeseburger,
-    price: 7.99,
-    category: 'burgers'
-  },
-  {
-    id: 4,
-    name: "Double Quarter Pounder With Cheese",
-    image: DoubleQuarterPounderWithCheese,
-    price: 9.99,
-    category: 'burgers'
-  },
-  {
-    id: 5,
     name: "Hamburger",
     image: Hamburger,
     price: 4.99,
     category: 'burgers'
   },
   {
-    id: 6,
+    id: 4,
     name: "Q Double",
     image: McDouble,
     price: 10.99,
-    category: 'burgers'
-  },
-  {
-    id: 7,
-    name: "Quarter Pounder Cheese Deluxe",
-    image: QuarterPounderCheeseDeluxe,
-    price: 12.99,
-    category: 'burgers'
-  },
-  {
-    id: 8,
-    name: "Quarter Pounder With Cheese",
-    image: QuarterPounderwithCheese,
-    price: 11.99,
     category: 'burgers'
   },
 ];
@@ -119,48 +92,41 @@ export const drinks = [
     },
     {
       id: 2,
-      name: "Frozen Coca Cola",
+      name: "Coca Cola",
       image: FrozenCola,
       price: 2.99,
       category: 'drinks'
     },
     {
       id: 3,
-      name: "Frozen Fanta Blue Raspberry",
-      image: FrozenFanta,
-      price: 4.99,
-      category: 'drinks'
-    },
-    {
-      id: 4,
       name: "Hot Tea",
       image: HotTea,
       price: 1.99,
       category: 'drinks'
     },
     {
-      id: 5,
+      id: 4,
       name: "Sweet Tea",
       image: SweetTea,
       price: 1.99,
       category: 'drinks'
     },
     {
-      id: 6,
+      id: 5,
       name: "Lemonade",
       image: Lemonade,
       price: 1.99,
       category: 'drinks'
     },
     {
-      id: 7,
+      id: 6,
       name: "Coca Cola",
       image: CocaCola,
       price: 1.99,
       category: 'drinks'
     },
     {
-      id: 8,
+      id: 7,
       name: "Sprite",
       image: Sprite,
       price: 1.99,
@@ -171,27 +137,20 @@ export const drinks = [
 export const fries = [
   {
     id: 0,
-    name: "French Fries",
-    image: French,
-    price: 1.99,
-    category: 'fries'
-  },
-  {
-    id: 1,
-    name: "Jalapeno Baconator Fries",
+    name: "Jalapeno Fries",
     image: Jalapeno,
     price: 2.99,
     category: 'fries'
   },
   {
-    id: 2,
+    id: 1,
     name: "Baconator Fries",
     image: Bacantor,
     price: 2.99,
     category: 'fries'
   },
   {
-    id: 3,
+    id: 2,
     name: "Chili Cheese Fries",
     image: Chili,
     price: 1.99,
@@ -209,7 +168,7 @@ export const salads = [
   },
   {
     id: 1,
-    name: "Avocado-Chicken Salad",
+    name: "Chicken Salad",
     image: Avocado,
     price: 6.99,
     category: 'salads'
@@ -230,7 +189,7 @@ export const salads = [
   },
   {
     id: 4,
-    name: "Spicy Grilled Salad",
+    name: "Grilled Salad",
     image: GrilledSalad,
     price: 5.99,
     category: 'salads'
@@ -268,14 +227,14 @@ export const sweets = [
   },
   {
     id: 4,
-    name: "M&M's",
+    name: "M&M's Ice Cream",
     image: Mms,
     price: 3.99,
     category: 'sweets'
   },
   {
     id: 5,
-    name: "OREO",
+    name: "OREO Ice Cream",
     image: Oreo,
     price: 3.99,
     category: 'sweets'
@@ -299,7 +258,7 @@ export const wraps = [
   },
   {
     id: 2,
-    name: "Spicy Buffalo Chicken Caesar Wrap",
+    name: "Spicy Buffalo Chicken Wrap",
     image: Spicy,
     price: 6.99,
     category: 'wraps'

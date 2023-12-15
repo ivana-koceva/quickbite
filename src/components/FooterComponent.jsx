@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from '../images/quickbite.png'
+import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa6";
 
 const Footer = styled.footer`
     padding: 3rem 2rem;
@@ -67,7 +70,7 @@ function FooterComponent() {
             <FooterLink href='/'>Home</FooterLink>
             <FooterLink href='/menu'>Our Menu</FooterLink>
             <FooterLink href='/about-us'>Our Story</FooterLink>
-            <FooterLink href='/contact-us'>Reach Out</FooterLink>
+            {/* <FooterLink href='/contact-us'>Reach Out</FooterLink> */}
         </FooterLinkContainer>
         <FooterLinkContainer className='d-grid text-left'>
             <FooterTitle>Customer Care</FooterTitle>
@@ -77,9 +80,11 @@ function FooterComponent() {
         </FooterLinkContainer>
         <FooterLinkContainer className='d-grid text-left'>
             <FooterTitle>Follow Us</FooterTitle>
-                <FooterLink href='/'>Home</FooterLink>
-                <FooterLink href='/'>Our Menu</FooterLink>
-                <FooterLink href='/'>Join Our Team</FooterLink>
+            <div className='d-flex justify-content-between'>
+                <FooterLink href='https://www.facebook.com/'><FaFacebook color='#FFFFFF'></FaFacebook></FooterLink>
+                <FooterLink href='https://twitter.com/?lang=en'><FaXTwitter color='#FFFFFF'></FaXTwitter></FooterLink>
+                <FooterLink href='https://www.instagram.com/'><FaInstagram color='#FFFFFF'></FaInstagram></FooterLink>
+            </div>
         </FooterLinkContainer>
     </FooterLinksWrapper>
   </Footer>;
