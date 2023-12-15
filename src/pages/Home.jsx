@@ -21,6 +21,8 @@ import AboutUs from '../images/aboutus.jpg'
 import Offer1 from '../images/offer 1.jpg'
 import Offer2 from '../images/offer 2.jpg'
 import Offer3 from '../images/offer 3.jpg'
+import { useState } from 'react';
+import ReactDOM from 'react-dom/client';
 
 const CategoryCardsWrapper = styled.div`
 `
@@ -133,6 +135,13 @@ const AboutUsText = styled.p`
   }
 `
 function Home() {
+  const [email, setEmail] = useState("");
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setEmail('');
+  }
+
   return (
     <> <BannerImageWrapper className='container-fluid'>
         <BannerImage className='row'>
@@ -141,8 +150,8 @@ function Home() {
             <ParagraphComponent text="From irresistible burgers to crispy, flavorful fries, every bite is a taste of perfection. 
             Join us and discover why we're your top choice for unbeatable fast food satisfaction!"></ParagraphComponent> 
             <ButtonsContainerWrapper>
-              <PrimaryButtonComponent text="Order now" link="/about-us"></PrimaryButtonComponent>
-              <SecondaryButtonComponent text="Order delivery"></SecondaryButtonComponent>
+              <PrimaryButtonComponent text="Order now" link="/menu/burgers"></PrimaryButtonComponent>
+              <SecondaryButtonComponent text="Order delivery" link="/menu"></SecondaryButtonComponent>
             </ButtonsContainerWrapper>
           </CTAContainer>
           <div className='col-lg-6 col-md-5 col-sm-4'></div>
@@ -208,8 +217,20 @@ function Home() {
         <NewsTextContainer className='col-lg-6 col-md-8 col-sm-8 text-left'>
           <HeadingComponent text="Join The Rewards Club!"></HeadingComponent>
           <ParagraphComponent text="Earn points with every purchase, unlocking delicious perks and exclusive discounts. 
-          Sign up today and savor the taste of savings with every visit!"></ParagraphComponent> 
-          <PrimaryButtonComponent text="Sign up"></PrimaryButtonComponent>
+          Sign up today and savor the taste of savings with every visit!"></ParagraphComponent>
+          
+          <form onSubmit={handleSubmit} style={{margin: '0.5rem 0'}}>
+            <input 
+              type="email" 
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder='your.email@example.com'
+              style={{border: '1px solid #9F0000', borderRadius: '24px', fontFamily: 'Montserrat', fontWeight: '300', width: '19rem',
+              fontSize: '0.8rem', color: '#FFFFFF', padding: '14px 20px', background: 'transparent', marginBottom: '0.5rem', marginRight: '0.5rem'}}/>
+            <input type="submit" style={{border: '1px solid #9F0000', borderRadius: '24px', fontFamily: 'Montserrat', fontWeight: '400',
+              fontSize: '0.8rem', color: '#FFFFFF', padding: '14px 42px', background: '#9F0000', textTransform: 'capitalize'}}/>
+          </form>
+
         </NewsTextContainer>
         <div className='col-lg-6 col-md-5 col-sm-4'></div>
         </NewsContainer>

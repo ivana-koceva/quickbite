@@ -6,7 +6,6 @@ import PrimaryButtonComponent from './PrimaryButton';
 const Header = styled.header`
     background: #FCFCFC;
     box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.05);
-    padding: 0 1rem;
 `
 const HeaderLinkContainer = styled.span`
     @media (max-width: 768px) {

@@ -37,7 +37,6 @@ function Menu() {
 
   const items = getCategoryItems(category);
 
-  
     return (
       <div className='container'>
           <MenuWrapper className='row'>
