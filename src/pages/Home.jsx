@@ -150,7 +150,7 @@ function Home() {
             <ParagraphComponent text="From irresistible burgers to crispy, flavorful fries, every bite is a taste of perfection. 
             Join us and discover why we're your top choice for unbeatable fast food satisfaction!"></ParagraphComponent> 
             <ButtonsContainerWrapper>
-              <PrimaryButtonComponent text="Order now" link="/menu/burgers"></PrimaryButtonComponent>
+              <PrimaryButtonComponent text="Order now" link="/menu"></PrimaryButtonComponent>
               <SecondaryButtonComponent text="Order delivery" link="/menu"></SecondaryButtonComponent>
             </ButtonsContainerWrapper>
           </CTAContainer>
